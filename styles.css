@@ -5,6 +5,104 @@ body {
     background-color: #e9ecef; /* Cor de fundo suave */
 }
 
+.sidebar {
+    width: 250px; /* Aumentei a largura da barra lateral */
+    background-color: #001F3F; /* Azul escuro */
+    color: white;
+    height: 100vh;
+    padding: 20px; /* Aumentei o padding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para a barra lateral */
+    transition: width 0.3s ease; /* Animação suave ao aumentar/reduzir o tamanho */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* Aumentei o espaçamento entre os itens */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 12px; /* Aumentei o padding dos links */
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Bordas arredondadas nos links */
+}
+
+.sidebar ul li a:hover {
+    background-color: #003399; /* Altera o fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.content {
+    margin-left: 260px; /* Espaço para a barra lateral aumentada */
+    padding: 20px;
+}
+
+.welcome-message {
+    font-size: 36px;
+    color: #001F3F; /* Azul escuro */
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento abaixo */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px; /* Bordas arredondadas no container */
+    overflow: hidden; /* Para esconder o conteúdo fora do container */
+}
+
+.slide {
+    display: none; /* Oculta as imagens por padrão */
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra nas imagens */
+}
+
+.text {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 12px; /* Aumentei o padding do texto */
+    text-align: center;
+    border-radius: 5px; /* Bordas arredondadas para o texto */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%; /* Mudança para bordas arredondadas */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.next {
+    right: 10px; /* Distância do botão da borda */
+}
+
+.prev {
+    left: 10px; /* Distância do botão da borda */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro ao passar o mouse */
+}
+
 .login-container {
     display: flex;
     justify-content: center;
