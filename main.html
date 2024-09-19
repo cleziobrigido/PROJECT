@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#home" class="nav-link">Início</a></li>
-                <li><a href="#videos" class="nav-link">Vídeos</a></li>
-                <li><a href="#pdfs" class="nav-link">PDFs</a></li>
-                <li><a href="#" id="logout">Sair</a></li>
-            </ul>
-        </aside>
-        <main class="content">
-            <h1 id="welcome-message">Bem-vindo!</h1>
-            <div id="home" class="section active-section">
-                <center><h2>Início</h2></center>
-                <p>Conteúdo da página inicial.</p>
-            </div>
-            <div id="videos" class="section hidden">
-               <center><h2>Vídeos</h2></center> 
-                <input type="file" id="videoUpload" accept="video/*">
-                <div id="videoList"></div>
-            </div>
-            <div id="pdfs" class="section hidden">
-               <center> <h2>PDFs</h2></center>
-                <input type="file" id="pdfUpload" accept="application/pdf">
-                <div id="pdfList"></div>
-            </div>
-        </main>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 sidebar">
+                <h2 class="text-center">Menu</h2>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#videos">Vídeos</a></li>
+                        <li><a href="#pdfs">PDFs</a></li>
+                        <li><a href="#conteudo">Conteúdo</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-md-9 main-content">
+                <header class="header text-center">
+                    <h1>Seja Bem-vindo!</h1>
+                </header>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="news1.jpg" alt="Notícia 1">
+                        <div class="text">Notícia sobre Matemática 1</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="news2.jpg" alt="Notícia 2">
+                        <div class="text">Notícia sobre Matemática 2</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="news3.jpg" alt="Notícia 3">
+                        <div class="text">Notícia sobre Matemática 3</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </main>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
