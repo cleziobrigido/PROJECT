@@ -4,12 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos da tela de login */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #004080, #0056b3); /* Azul escuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #004080; /* Azul escuro */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container label {
+            font-size: 16px;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #004080; /* Azul escuro */
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .login-container input:focus {
+            border-color: #0056b3; /* Azul mais claro ao focar */
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #004080; /* Azul escuro */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3; /* Azul mais claro ao passar o mouse */
+        }
+
+        #error-message {
+            color: red;
+            margin-top: 10px;
+            display: none; /* Esconde a mensagem de erro inicialmente */
+        }
+
+        /* Para mostrar a mensagem de erro */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm">
+        <form class="login-form" id="loginForm">
+            <h2>Login</h2>
             <label for="username">Usuário:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Senha:</label>
