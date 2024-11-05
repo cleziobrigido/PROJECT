@@ -2,198 +2,145 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9ecef; /* Cor de fundo suave */
+    background-color: #f4f6f8; /* Cor de fundo suave */
 }
 
+/* Barra lateral */
 .sidebar {
-    width: 250px; /* Aumentei a largura da barra lateral */
-    background-color: #001F3F; /* Azul escuro */
+    width: 300px; /* Aumentei a largura da barra lateral */
+    background: linear-gradient(135deg, #001F3F, #004080); /* Gradiente para um visual mais sofisticado */
     color: white;
     height: 100vh;
-    padding: 20px; /* Aumentei o padding */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para a barra lateral */
-    transition: width 0.3s ease; /* Animação suave ao aumentar/reduzir o tamanho */
+    padding: 20px;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    transition: width 0.3s ease;
+    position: fixed;
 }
 
+/* Título do Menu */
+.sidebar .menu-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700; /* Dourado para destaque */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Estilização dos itens do menu */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    margin: 20px 0; /* Aumentei o espaçamento entre os itens */
+    margin: 25px 0;
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 500;
     display: block;
-    padding: 12px; /* Aumentei o padding dos links */
-    transition: background-color 0.3s ease;
-    border-radius: 5px; /* Bordas arredondadas nos links */
+    padding: 14px 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px; /* Bordas mais arredondadas */
 }
 
 .sidebar ul li a:hover {
-    background-color: #003399; /* Altera o fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+    background-color: #3366CC; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais acentuada */
+    transform: translateX(10px); /* Efeito de deslocamento */
 }
 
+/* Área de conteúdo */
 .content {
-    margin-left: 260px; /* Espaço para a barra lateral aumentada */
-    padding: 20px;
+    margin-left: 320px;
+    padding: 40px;
 }
 
+/* Mensagem de boas-vindas */
 .welcome-message {
-    font-size: 36px;
-    color: #001F3F; /* Azul escuro */
+    font-size: 40px;
+    color: #001F3F;
     text-align: center;
-    margin-bottom: 20px; /* Espaçamento abaixo */
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 600px;
-    margin: auto;
-    border-radius: 10px; /* Bordas arredondadas no container */
-    overflow: hidden; /* Para esconder o conteúdo fora do container */
-}
-
-.slide {
-    display: none; /* Oculta as imagens por padrão */
-}
-
-.slide img {
-    width: 100%;
-    border-radius: 10px; /* Bordas arredondadas nas imagens */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra nas imagens */
-}
-
-.text {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 12px; /* Aumentei o padding do texto */
-    text-align: center;
-    border-radius: 5px; /* Bordas arredondadas para o texto */
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
+    margin-bottom: 30px;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 50%; /* Mudança para bordas arredondadas */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    text-transform: uppercase;
 }
 
-.next {
-    right: 10px; /* Distância do botão da borda */
-}
-
-.prev {
-    left: 10px; /* Distância do botão da borda */
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro ao passar o mouse */
-}
-
+/* Estilização do container de login */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(135deg, #002366, #004080); /* Gradiente de fundo */
+    background: linear-gradient(135deg, #002366, #004080);
 }
 
 .login-title {
     font-size: 36px;
     color: white;
-    margin-bottom: 30px; /* Espaçamento aumentado */
+    margin-bottom: 40px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
+/* Formulário de login */
 .login-container form {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    padding: 40px;
+    width: 400px;
+    padding: 50px;
     background-color: white;
-    border-radius: 15px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-}
-
-.login-container label {
-    margin-bottom: 5px;
-    color: #555; /* Cor mais suave */
-    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .login-container input {
-    margin-bottom: 15px; /* Espaçamento aumentado */
-    padding: 12px;
+    margin-bottom: 20px;
+    padding: 15px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 10px;
     transition: border-color 0.3s ease;
 }
 
-.login-container input:focus {
-    border-color: #007bff; /* Cor ao focar */
-    outline: none; /* Remove o contorno padrão */
-}
-
 .login-container button {
-    padding: 12px;
-    font-size: 16px;
+    padding: 14px;
+    font-size: 18px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .login-container button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
-    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
-}
-
-#error-message {
-    color: red;
-    margin-top: 15px;
-    text-align: center;
-    font-weight: bold;
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Leve elevação */
 }
 
 /* Estilização para o botão de upload */
-.upload-container {
-    margin-bottom: 20px;
-}
-
-.upload-container input[type="file"] {
-    display: block;
-    margin: 10px auto;
-}
-
 .upload-container button {
-    padding: 12px;
+    padding: 14px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .upload-container button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
